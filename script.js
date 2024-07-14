@@ -4,7 +4,7 @@ const eHours = document.getElementById("hours")
 const eMinutes = document.getElementById("minutes")
 const eSeconds = document.getElementById("seconds")
 
-const targetDate = new Date("July 20, 2024 16:00:00").getTime();
+const targetDate = new Date("July 23, 2024 16:00:00").getTime();
 
 function formatNumber(number) {
     return number < 10 ? '0' + number : number;
@@ -28,10 +28,6 @@ function updateCountdown() {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    if ((days || hours || minutes || seconds) > 10) {
-        
-    }
     
     eDays.innerText = formatNumber(days);
     eHours.innerText = formatNumber(hours);
